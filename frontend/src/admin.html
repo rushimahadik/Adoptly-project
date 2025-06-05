@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="icon" type="image/png" href="../assets/img/logo-removebg-preview copy.png" />
+    <title>Adoptly Admin panel </title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Adoptly Admin Panel </h1>
+            <p id="datetime"></p>
+            <div id="userSection">
+
+                <button id="loginButton" class="login-btn" onclick="openModal()">
+                    Login
+                </button>
+
+                <span id="userInfo" class="hidden"></span>
+
+                <button id="logoutBtn" class="hidden" onclick="return confirmLogout()">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="sidebar" id="sideBar">
+
+            <button data-section="adoption-requests" onclick="showSection('adoption-requests')">
+                Adoption Requests
+            </button>
+
+            <button data-section="post-pet-requests" onclick="showSection('post-pet-requests')">
+                Post Pet Requests
+            </button>
+
+            <button data-section="approved-pets" onclick="showSection('approved-pets')">
+                Approved Pets
+            </button>
+
+            <button data-section="volunteer-requests" onclick="showSection('volunteer-requests')">Volunteer
+                Requests
+            </button>
+
+            <button data-section="adoption-history" onclick="showSection('adoption-history')">Adoption
+                History
+            </button>
+
+        </div>
+
+
+        <section class="big-container">
+
+
+
+            <div id="adoption-requests" class="section active">
+
+            </div>
+
+            <div id="post-pet-requests" class="section">
+
+            </div>
+
+            <div id="approved-pets" class="section">
+
+            </div>
+
+            <div id="donation" class="section">
+
+            </div>
+
+            <div id="volunteer-requests" class="section">
+
+            </div>
+
+            <div id="adoption-history" class="section">
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+        <div id="loginModal" class="modal-1">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModal" onclick="closeModal()">&times;</span>
+
+                <div id="login-form" method="POST">
+                    <div class="loginimg">
+                        <img src="../assets/img/logo-removebg-preview.png" id="logoimg" />
+
+                        <h3>Adoptly</h3>
+                    </div>
+                    <p id="loginMessage" class="message"></p>
+                    <form>
+                        <input type="email" placeholder="Email Address" id="email" required />
+                        <input type="password" placeholder="Password" id="password" required />
+                        <button type="submit">Log in</button>
+                    </form>
+                    <p class="toggle-link" onclick="toggleForm()">
+                        Don't have an account? Sign up
+                    </p>
+                </div>
+
+                <div id="register-form" method="POST" class="hidden">
+                    <div class="loginimg">
+                        <img src="../assets/img/logo-removebg-preview.png" id="logoimg" />
+
+                        <h3>Adoptly</h3>
+                    </div>
+                    <p id="registerMessage" class="message"></p>
+                    <form>
+                        <input type="text" placeholder="Username" id="username" required />
+                        <input type="email" placeholder="Email Address" id="email" required />
+                        <input type="password" placeholder="Password" id="password" required />
+                        <button type="submit">Sign up</button>
+                    </form>
+                    <p class="toggle-link" onclick="toggleForm()">
+                        Already have an account? Log In
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Adoptly Admin Panel.All Rights Reserved.</p>
+    </footer>
+
+    <script src="../assets/js/admin.js"></script>
+</body>
+
+</html>

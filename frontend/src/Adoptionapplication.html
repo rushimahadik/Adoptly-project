@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/Adoptionapplication.css">
+    <title>Adoption Application</title>
+</head>
+
+<body>
+    <div class="container" id="adoptionModal">
+        <h2>Adoption Application</h2>
+        <form class="Application-form" id="adoptionForm">
+
+            <!-- Hidden field for Pet ID -->
+            <input type="hidden" id="petId" name="petId">
+
+            <h4>Personal Information</h4>
+
+            <label for="full_name">Your Full Name:</label>
+            <input type="text" id="applicantName" name="applicantName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" maxlength="10" required>
+
+            <label for="address">Your Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+
+            <label for="reason">Why do you want to adopt?</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+
+            <p>Are all members of your household in agreement with this adoption?</p>
+            <input type="radio" id="household_agreement" name="household_agreement" value="yes"> Yes
+            <input type="radio" id="household_agreement" name="household_agreement" value="no"> No
+
+            <p>I understand that I assume full responsibility for the welfare of this pet from the date of adoption.</p>
+
+            <button type="submit">Submit Adoption Request</button>
+
+            <div id="submissionMessage"></div>
+
+        </form>
+    </div>
+
+</body>
+<script src="../assets/js/Adoptionapplication.js"></script>
+
+</html>

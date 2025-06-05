@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="../assets/img/logo-removebg-preview copy.png" />
+
+
+  <script src="https://kit.fontawesome.com/c5726222dc.js" crossorigin="anonymous"></script>
+  <title>Adoptly</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <img src="../assets/img/website_logo-removebg-preview.png" alt="Logo" class="logo" />
+
+      <div class="nav-links">
+        <button data-section="home" onclick="showSection('home')">
+          Home
+        </button>
+
+        <button data-section="adoptly" onclick="showSection('adoptly')">
+          Adoptly
+        </button>
+
+        <button data-section="services" onclick="showSection('services')">
+          Services
+        </button>
+
+      </div>
+
+      <div id="userSection">
+
+        <button id="loginButton" class="login-btn" onclick="openModal()">
+          Login
+        </button>
+
+        <span id="userInfo" class="hidden"></span>
+
+        <button id="logoutBtn" class="hidden" onclick="return confirmLogout()">Logout</button>
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main>
+    <!-- Popup Modal -->
+    <div id="profileModal" class="modal-2">
+      <div class="modal-content">
+        <span class="close" onclick="closeProfilePopup()">&times;</span>
+        <iframe id="profileIframe" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+
+
+    <!-- Home Section -->
+    <div id="home" class="section active">
+      <section class="container">
+        <!-- Hero section  -->
+        <div class="content">
+          <div class="hero-text1">
+            <h1>Welcome to Adoptly !</h1>
+            <p>
+              Find your perfect best friend and give them a loving home. At
+              Adoptly, we connect compassionate adopters with pets in need.
+              Browse, adopt, and make a difference today!
+            </p>
+          </div>
+          <div class="hero-text2">
+            <h1>Adopt a pet today</h1>
+            <p>Find your new best friend</p>
+            <button data-section="adoptly" onclick="showSection('adoptly')" class="btn">
+              Adopt Now
+            </button>
+          </div>
+        </div>
+        <div class="Hero-img">
+          <img src="../assets/img/background_dog_img_2025-02-10_144324-removebg-preview2.png" alt="dog" />
+        </div>
+      </section>
+
+      <!-- Featured Animals -->
+      <div class="span">
+        <h2>Featured pets</h2>
+      </div>
+
+      <section class="featured-animals">
+        <div class="animal-listing">
+          <div id="pets-containers">
+
+
+            <div class="pet-card" id="1">
+              <img src="../assets/img/murfiimg.jpg" alt="Dog" />
+              <h3>Murfi</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+            <div class="pet-card" id="2">
+              <img src="../assets/img/brownie img.jpg" alt="Dog" />
+              <h3>Brownie</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+            <div class="pet-card" id="3">
+              <img src="../assets/img/buddyimg.png" alt="Dog" />
+              <h3>Buddy</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+
+            <div class="pet-card" id="4">
+              <img src="../assets/img/topsiimg.png" alt="Dog" />
+              <h3>Topsi</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+            <div class="pet-card" id="5">
+              <img src="../assets/img/sheruimg.png" alt="Dog" />
+              <h3>Sheru</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+
+            <div class="pet-card" id="6">
+              <img src="../assets/img/billuimg.png" alt="Cat" />
+              <h3>Billu</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+            <div class="pet-card" id="7">
+              <img src="../assets/img/meowimg.png" alt="Cat" />
+              <h3>Meow</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+            <div class="pet-card" id="8">
+              <img src="../assets/img/goluimg.png" alt="Dog" />
+              <h3>Golu</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+
+            <div class="pet-card" id="9">
+              <img src="../assets/img/kaluimg.png" alt="Dog" />
+              <h3>kalu</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+            <div class="pet-card" id="10">
+              <img src="../assets/img/simbaimg.png" alt="Cat" />
+              <h3>Simba</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+
+            <div class="pet-card" id="11">
+              <img src="../assets/img/sultanimg.png" alt="Dog" />
+              <h3>Sultan</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+            <div class="pet-card" id="12">
+              <img src="../assets/img/chintuimg.png" alt="Cat" />
+              <h3>Chintu</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+            <div class="pet-card" id="13">
+              <img src="../assets/img/dollyimg.jpg" alt="Dog" />
+              <h3>Dolly</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+
+            <div class="pet-card" id="14">
+              <img src="../assets/img/cocoimg.png" alt="Dog" />
+              <h3>Coco</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+            <div class="pet-card" id="15">
+              <img src="../assets/img/rajaimg.png" alt="Cat" />
+              <h3>Raja</h3>
+
+              <button class="adopt-now" onclick="openProfilePopup('../src/Adoptionapplication.html')">Adopt Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="list-upperimg"></div>
+      </section>
+
+      <!-- why-adopt section -->
+
+      <section class="why-adopt">
+        <h2>🐾 Why Adopt a Pet?</h2>
+        <p class="intro">
+          Adopting a pet means saving a life and gaining a loving friend.
+          Here's why adoption is the best choice!
+        </p>
+
+        <div class="adopt-benefits">
+          <div class="benefit">
+            <img src="../assets/img/Screenshot 2025-02-12 174232.png" alt="Save a Life" />
+            <h3>Save a Life</h3>
+            <p>Give a homeless pet a second chance at happiness.</p>
+          </div>
+          <div class="benefit">
+            <img src="../assets/img/a3CNggdMYXHjB6ghEFaGSX-724-80-removebg-preview.png" alt="Affordable" />
+            <h3>Cost-Effective</h3>
+            <p>Adoption is much cheaper than buying from breeders.</p>
+          </div>
+          <div class="benefit">
+            <img src="../assets/img/happy-dog-and-cat-posing-together-in-studio-photo-removebg-preview.png"
+              alt="Healthy Pets" />
+            <h3>Health Benefits</h3>
+            <p>Most adopted pets are vaccinated and neutered.</p>
+          </div>
+          <div class="benefit">
+            <img src="../assets/img/dog img.png" alt="Unconditional Love" />
+            <h3>Unconditional Love</h3>
+            <p>Rescue pets bond deeply with their adopters.</p>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <img src="../assets/img/IMG-20250210-WA0001.jpg" alt="Happy Adopted Pet" />
+          <blockquote>
+            “Adopting Max was the best decision of my life! He brings so much
+            joy to our home.” - Sarah J.
+          </blockquote>
+        </div>
+        <button data-section="adoptly" onclick="showSection('adoptly')" class="cta-button">Find Your Perfect Pet
+          🐶</button>
+      </section>
+
+
+    </div>
+    <!-- Adoptly section -->
+    <div id="adoptly" class="section">
+      <div class="container">
+        <section class="search-section">
+
+          <div class="pets-selection">
+            <!-- Pet Filter Dropdown -->
+            <select id="pet-filter">
+              <option value="all">Available pets</option>
+              <option value="dogs">Dogs</option>
+              <option value="cats">Cats</option>
+              <option value="birds">Birds</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="pets-results">
+          <div class="animal-listing">
+            <div class="pet-list" id="petList">
+
+              <!-- Dynamically added pets will appear here -->
+
+            </div>
+            <!-- No pets available message -->
+            <p id="noPetsMessage">No pets available</p>
+
+
+          </div>
+      </div>
+      </section>
+
+
+    </div>
+
+    </div>
+
+    <!-- Service Section -->
+    <div id="services" class="section">
+      <header class="hero">
+        <h1>Our Services for Animal Welfare</h1>
+        <p>
+          Helping pets find homes, stay healthy, and get the care they need.
+        </p>
+      </header>
+      <section class="services-big">
+
+
+        <div class="right-container">
+          <img src="../assets/img/adoptPet.png" id="serviceimg" alt="Post a Pet" />
+
+          <div class="service-container">
+
+            <!-- service 1: Post a Pet for adoption -->
+            <div class="service-card">
+              <h3>Post a Pet for adoption</h3>
+              <p>
+                Help us find a loving home for your pet. Post your pet for
+                adoption on our website.
+              </p>
+              <button data-servicesection="post-pet" onclick="showserviceSection('post-pet')" class="btn">
+                Post a Pet </button>
+            </div>
+            <!-- Service 2: Pet Adoption -->
+            <div class="service-card">
+
+              <h3>Pet Adoption</h3>
+              <p>
+                Find your perfect furry friend. We have rescued pets waiting for
+                a loving home.
+              </p>
+              <button data-section="adoptly" onclick="showSection('adoptly')" class="btn">
+                Adopt Now
+              </button>
+            </div>
+
+            <!-- Service 3: Volunteer -->
+            <div class="service-card">
+              <h3>Volunteer Now</h3>
+              <p>
+                Join us in making a difference. Join now to help in shelters,
+                events, or online campaigns.
+              </p>
+              <button data-servicesection="volunteer" onclick="showserviceSection('volunteer')" class="btn">Join
+                Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="left-container">
+
+          <!-- 1 post pet section -->
+          <section id="post-pet" class="service-section">
+            <div class="post-pets">
+              <!-- Close button -->
+              <span>
+                <button class="closes-btn" onclick="closeserviceSection('post-pet')">×</button>
+              </span>
+              <img src="../assets/img/postPet.png" alt="Post a Pet" />
+              <h2>Post a Pet for Adoption</h2>
+              <form class="post-form" id="petForm" action="/api/pet-requests" method="POST"
+                enctype="multipart/form-data">
+                <div class="form-group">
+
+                  <label for="petname">Pet Name:</label>
+                  <input type="text" id="petname" name="petname" required>
+
+                  <label for="petspecies">Pet species:</label>
+                  <select name="species" id="petspecies" required>
+                    <option value="">Select Pet species</option>
+                    <option value="dogs">Dogs</option>
+                    <option value="cats">Cats</option>
+                    <option value="birds">Birds</option>
+                  </select><br>
+
+                  <label for="petAge">Pet Age:</label>
+                  <input type="text" id="petAge" required>
+
+                  <label for="petBreed">Pet Breed:</label>
+                  <input type="text" id="petBreed" required>
+
+                  <label for="petGender">Pet Gender:</label>
+                  <select id="petGender" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select><br>
+
+                  <label for="petImage">Pet Image:</label>
+                  <div class="file-upload">
+                    <input type="file" id="petImageInput" name="petImage" class="petImage" accept="image/*" required>
+                    <label for="petImageInput" class="file-label">Choose a file</label>
+                  </div>
+
+                  <label for="petDescription">Pet Description:</label>
+                  <textarea id="petDescription" required></textarea>
+
+                  <button type="submit">Post your pet</button>
+                </div>
+
+                <div id="petpostmessage"></div>
+              </form>
+            </div>
+
+          </section>
+
+          <!-- 2 volunteer section -->
+          <section id="volunteer" class="service-section">
+
+            <div class="volunteers">
+              <!-- Close button -->
+              <span>
+                <button class="close-btn" onclick="closeserviceSection('volunteer')">×</button>
+              </span>
+              <h2>Adoptly Volunteer Application </h2>
+              <p>Join us in making a difference. Join now to help in shelters, events, or online campaigns.</p>
+              <form id="volunteerForm">
+                <div class="form-group">
+                  <label for="name">Full Name:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="dob">Date of Birth:</label>
+                  <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone" maxlength="10" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="address">Address:</label>
+                  <textarea id="address" name="address" required></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Preferred Days to Volunteer:</label>
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="days" name="days" value="Monday"> Monday
+                    <input type="checkbox" id="days" name="days" value="Tuesday"> Tuesday
+                    <input type="checkbox" id="days" name="days" value="Wednesday"> Wednesday
+                    <input type="checkbox" id="days" name="days" value="Thursday"> Thursday
+                    <input type="checkbox" id="days" name="days" value="Friday"> Friday
+                    <input type="checkbox" id="days" name="days" value="Saturday"> Saturday
+                    <input type="checkbox" id="days" name="days" value="Sunday"> Sunday
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Preferred Hours to Volunteer:</label>
+                  <div class="radio-group">
+                    <input type="radio" id="hours" name="hours" value="Morning" required> Morning (9 AM - 12 PM)
+                    <input type="radio" id="hours" name="hours" value="Afternoon" required> Afternoon (12 PM - 3 PM)
+                    <input type="radio" id="hours" name="hours" value="Evening" required> Evening (3 PM - 6 PM)
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="experience">Do you have any previous experience with animals?</label>
+                  <textarea id="experience" name="experience" required></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="tasks">What kind of tasks are you interested in?</label>
+                  <textarea id="tasks" name="tasks" required></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="health">Do you have any allergies to animals?</label>
+                  <input type="text" id="health" name="health">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="whyVolunteer">Why do you want to volunteer with our shelter?</label>
+                  <textarea id="whyVolunteer" name="whyVolunteer" required></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="previousVolunteer">Have you volunteered before? If so, where?</label>
+                  <textarea id="previousVolunteer" name="previousVolunteer" required></textarea>
+                </div>
+
+                <div id="form-group">
+                  <button type="submit" id="submitBtn">Submit</button>
+                </div>
+
+                <div id="volunteerMessage"></div>
+
+              </form>
+            </div>
+
+
+          </section>
+
+        </div>
+
+
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials">
+        <h2>What People Say</h2>
+        <div class="people-box">
+          <div class="testimonial">
+            <p>
+              "Adoptly helped us find the most wonderful dog. The process was
+              smooth and easy!"
+            </p>
+            <strong>- Lisa M.</strong>
+          </div>
+          <div class="testimonial">
+            <p>
+              "The vet services here saved my cat's life. Thank you for your
+              care and dedication!"
+            </p>
+            <strong>- Mark D.</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs Section -->
+      <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+          <summary>How do I adopt a pet?</summary>
+          <p>
+            Visit our adoption page, choose a pet, and complete the
+            application.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do I need experience to volunteer?</summary>
+          <p>
+            No, just a passion for animals! We provide training for new
+            volunteers.
+          </p>
+        </details>
+      </section>
+    </div>
+
+
+
+    <!-- Login Section -->
+    <div id="loginModal" class="modal-1">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal" onclick="closeModal()">&times;</span>
+
+        <div id="login-form" method="POST">
+          <div class="loginimg">
+            <img src="../assets/img/logo-removebg-preview.png" id="logoimg" />
+
+            <h3>Adoptly</h3>
+          </div>
+          <p id="loginMessage" class="message"></p>
+          <form>
+            <input type="email" placeholder="Email Address" id="email" required />
+            <input type="password" placeholder="Password" id="password" required />
+            <button type="submit">Log in</button>
+          </form>
+          <p class="toggle-link" onclick="toggleForm()">
+            Don't have an account? Sign up
+          </p>
+        </div>
+
+        <div id="register-form" method="POST" class="hidden">
+          <div class="loginimg">
+            <img src="../assets/img/logo-removebg-preview.png" id="logoimg" />
+
+            <h3>Adoptly</h3>
+          </div>
+          <p id="registerMessage" class="message"></p>
+          <form>
+            <input type="text" placeholder="Username" id="username" required />
+            <input type="email" placeholder="Email Address" id="email" required />
+            <input type="password" placeholder="Password" id="password" required />
+            <button type="submit">Sign up</button>
+          </form>
+          <p class="toggle-link" onclick="toggleForm()">
+            Already have an account? Log In
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- About Us Section -->
+  <footer>
+    <section class="about-us">
+      <h2>About Us</h2>
+      <p>
+        Adoptly is a web application that helps to manage the adoption of
+        animals. It helps to keep track of the animals that are available for
+        adoption and the animals that have been adopted. It also helps to keep
+        track of the people who have adopted the animals. It is a
+        user-friendly application that is easy to use. It is designed to help
+        animal shelters and rescue organizations to manage the adoption
+        process more efficiently.
+      </p>
+      <p>
+        Join us in making a difference. Adopt, foster, or donate to help give
+        animals a second chance at life.
+      </p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <i class="fa-solid fa-phone"></i>
+        <p>123-456-7890</p>
+        <i class="fa-solid fa-envelope"></i>
+        <p>adoptly@gmail.com</p>
+      </div>
+    </section>
+
+    <div class="social-media">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Adoptly. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
